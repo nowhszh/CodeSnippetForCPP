@@ -1,6 +1,12 @@
-cmake_minimum_required(VERSION 3.26)
-project(cpp_snippet)
+cmake_minimum_required(VERSION 3.16)
+project(CodeSnippetForCPP)
 
-set(CMAKE_CXX_STANDARD 20)
+set(CMAKE_CXX_STANDARD_REQUIRED on)
+set(CMAKE_CTEST_ARGUMENTS ${CMAKE_CTEST_ARGUMENTS} --verbose) # require cmake 3.17
+set(CMAKE_MODULE_PATH "${CMAKE_SOURCE_DIR}/cmake")
 
-add_executable(cpp_snippet main.cpp)
+include(TestFunctions)
+
+enable_testing()
+
+add_subdirectory(src)
