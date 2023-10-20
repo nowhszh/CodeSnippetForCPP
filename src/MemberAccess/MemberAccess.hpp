@@ -14,16 +14,16 @@
 // and then you can use the macro function to judge the result.
 // the following are some of the available macro functions:
 
-// Checks if the accessibility of "member" in class "type" is public/protected/private.
-#define IS_PUBLIC_MEMBER(type, member)    (__##member##MemberAccess<type>::is_public_member)
-#define IS_PROTECTED_MEMBER(type, member) (__##member##MemberAccess<type>::is_protected_member)
-#define IS_PRIVATE_MEMBER(type, member)   (__##member##MemberAccess<type>::is_private_member)
-
 // Determine if "member" is a member/member function of "type".
 #define IS_A_MEMBER(type, member) (__##member##MemberAccess<type>::is_existed)
 
 // Get the accessibility of "member" in class "type", return type is MemberAccessLevel.
-#define MEMBER_ACCESS_LEVEL(type, member) (__##member##MemberAccess<type>::access_level)
+#define MEMBER_VAR_ACCESS_LEVEL(type, member) (__##member##MemberAccess<type>::access_level)
+
+// Checks if the accessibility of "member" in class "type" is public/protected/private.
+#define IS_PUBLIC_MEMBER_VAR(type, member)    (__##member##MemberAccess<type>::is_public_member)
+#define IS_PROTECTED_MEMBER_VAR(type, member) (__##member##MemberAccess<type>::is_protected_member)
+#define IS_PRIVATE_MEMBER_VAR(type, member)   (__##member##MemberAccess<type>::is_private_member)
 
 enum class MemberAccessLevel {
     NO_MEMBER,
