@@ -12,13 +12,11 @@ class TestStruct {
 public:
     int publicMember;
 
-
 protected:
     int protectedMember;
 
 private:
     int privateMember;
-    void hello() { }
 };
 
 struct Result {

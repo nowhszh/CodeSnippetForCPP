@@ -1,8 +1,10 @@
+## 其他语言版本
 
-[english](README_EN.md)
+[English](README_EN.md)
 
 ## 功能
 
-一些常用的c++代码片段
+一些c++代码片段, 可直接拷贝走复用
 
-- 编译期获取类成员访问权限
+- 编译期获取类成员访问权限 [readme](src/MemberAccess/README.md)
+- 编译期获取结构体成员数量 [readme](src/MemberCount/README.md)
